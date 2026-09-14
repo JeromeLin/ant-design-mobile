@@ -1,0 +1,88 @@
+# VirtualInput 虚拟输入框 <Experimental></Experimental>
+
+与 Input 输入框外观、用法一致。
+
+## 何时使用
+
+需要配合虚拟键盘使用时。
+
+## 示例
+
+<code src="./demos/demo1.tsx"></code>
+
+## VirtualInput
+
+### 属性
+
+| 属性 | 说明 | 类型 | 默认值 |
+| --- | --- | --- | --- |
+| clearable | 是否启用清除图标，点击清除图标后会清空虚拟输入框 | `boolean` | `false` |
+| onBlur | 失去焦点时触发 | `() => void` | - |
+| onClear | 点击清除按钮时触发 | `() => void` | - |
+| onClick | 点击时触发 | `(e: React.MouseEvent<HTMLDivElement>) => void` | - |
+| onFocus | 获得焦点时触发 | `() => void` | - |
+| placeholder | 提示文本 | `string` | - |
+| value | 输入值 | `string` | `''` |
+| cursor | 光标相关配置，movable 表示是否可调整，onMove 为光标移动回调 | `{ movable?: boolean; onMove?: (position: number) => void }` | `{ movable: false }` |
+
+严格意义上讲，VirtualInput 并不是一个表单类型的组件，它只是对数据进行展示。
+
+### Ref
+
+| 属性  | 说明             | 类型         |
+| ----- | ---------------- | ------------ |
+| blur  | 让输入框失去焦点 | `() => void` |
+| focus | 让输入框获得焦点 | `() => void` |
+
+### CSS 变量
+
+| 属性 | 说明 | 默认值 | 全局变量 |
+| --- | --- | --- | --- |
+| --caret-color | 光标颜色 | `var(--adm-color-primary)` | `--adm-virtual-input-caret-color` |
+| --caret-width | 光标宽度 | `2px` | `--adm-virtual-input-caret-width` |
+| --color | 文字颜色 | `var(--adm-color-text)` | - |
+| --disabled-color | 禁用状态下的文字颜色 | `var(--adm-color-weak)` | - |
+| --font-size | 字号 | `17px` | - |
+| --placeholder-color | `placeholder` 文字颜色 | `var(--adm-color-light)` | - |
+| --text-align | 文字对齐方式 | `left` | - |
+
+### 与NumberKeyboard配合使用
+
+强烈推荐将 NumberKeyboard 作为属性传入 VirtualInput，一方面可以少写很多联动代码，另外也有完善的无障碍支持。
+
+如果两个组件分离式引入，则需手动添加联动逻辑代码，且存在无障碍支持问题。
+
+```js
+// ✅ 推荐这么做
+ <VirtualInput
+  placeholder='请输入内容'
+  clearable
+  keyboard={
+    <NumberKeyboard
+      confirmText='确定'
+      customKey={{ key: '.', title: '小数点' }}
+    />
+  }
+/>
+
+// ❌ 不推荐这么做
+<VirtualInput
+  placeholder='请输入内容'
+  clearable
+  value={value}
+  onFocus={() => setVisible(true)}
+  onBlur={() => setVisible(false)}
+  onClear={() => setValue('')}
+  ref={inputRef}
+/>
+<NumberKeyboard
+  visible={visible}
+  confirmText='确定'
+  customKey={{ key: '.', title: '小数点' }}
+  onInput={v => setValue(i => i + v)}
+  onDelete={() => setValue(i => i.slice(0, i.length - 1))}
+  onClose={() => { setVisible(false); inputRef.current?.blur(); }}
+/>
+```
+
+<code src="./demos/demo2.tsx"></code>

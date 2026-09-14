@@ -1,6 +1,10 @@
-components/**/*.js
-components/**/*.jsx
-components/*/__tests__/type.tsx
-!.eslintrc.js
-!components/*/__tests__/**/*.js
-!components/*/demo/*
+build
+coverage
+dist
+es
+lib
+node_modules
+package-lock.json
+pnpm-lock.yaml
+yarn.lock
+*.min.js

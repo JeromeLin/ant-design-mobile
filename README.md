@@ -1,53 +1,57 @@
-English | [简体中文](./README.zh-CN.md)
+<div align="center">
 
-<p align="center">
-  <a href="http://mobile.ant.design">
-    <img width="320" src="https://zos.alipayobjects.com/rmsportal/wIjMDnsrDoPPcIV.png">
-  </a>
-</p>
+  <img src="https://gw.alipayobjects.com/zos/bmw-prod/b2c7ff8b-eba0-4af9-9dd5-0b5b17f42c57.svg" alt="logo" width="200" height="auto" />
+  <h1>Ant Design Mobile</h1>
 
-# Ant Design Mobile
-[![](https://img.shields.io/travis/ant-design/ant-design-mobile.svg?style=flat-square)](https://travis-ci.org/ant-design/ant-design-mobile)
-[![Codecov](https://img.shields.io/codecov/c/github/ant-design/ant-design-mobile.svg?style=flat-square)](https://codecov.io/gh/ant-design/ant-design-mobile)
-[![npm package](https://img.shields.io/npm/v/antd-mobile.svg?style=flat-square)](https://www.npmjs.org/package/antd-mobile)
-[![NPM downloads](http://img.shields.io/npm/dm/antd-mobile.svg?style=flat-square)](https://npmjs.org/package/antd-mobile)
-[![Dependency Status](https://david-dm.org/ant-design/ant-design-mobile.svg?style=flat-square)](https://david-dm.org/ant-design/ant-design-mobile)
-[![CDNJS](https://img.shields.io/cdnjs/v/antd-mobile.svg?style=flat-square)](https://cdnjs.com/libraries/antd-mobile)
-[![Percentage of issues still open](http://isitmaintained.com/badge/open/ant-design/ant-design-mobile.svg)](http://isitmaintained.com/project/ant-design/ant-design-mobile "Percentage of issues still open")
-[![Join the chat at https://gitter.im/ant-design/ant-design-mobile](https://img.shields.io/gitter/room/ant-design/ant-design-mobile.svg?style=flat-square)](https://gitter.im/ant-design/ant-design-mobile?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+  <p>
+    Essential UI blocks for building mobile web apps. 
+  </p>
 
-A configurable Mobile UI specification and React-based implementation.
+[![npm (tag)](https://img.shields.io/npm/v/antd-mobile)](https://www.npmjs.com/package/antd-mobile) [![GitHub Release Date](https://img.shields.io/github/release-date/ant-design/ant-design-mobile)](https://github.com/ant-design/ant-design-mobile/releases) [![npm](https://img.shields.io/npm/dw/antd-mobile)](https://www.npmjs.com/package/antd-mobile) [![npm](https://img.shields.io/npm/dw/antd-mobile-v5-count?label=downloads%285.x%29)](https://www.npmjs.com/package/antd-mobile) [![jsdelivr](https://img.shields.io/jsdelivr/npm/hm/antd-mobile)](https://www.jsdelivr.com/package/npm/antd-mobile) [![gzip size](https://img.badgesize.io/https:/unpkg.com/antd-mobile/umd/antd-mobile.js?label=gzip%20size&compression=gzip)](https://unpkg.com/browse/antd-mobile@5/umd/antd-mobile.js) [![Commit Activity](https://img.shields.io/github/commit-activity/m/ant-design/ant-design-mobile/master)](https://github.com/ant-design/ant-design-mobile/graphs/contributors) [![Issues help wanted](https://img.shields.io/github/issues-raw/ant-design/ant-design-mobile/help%20wanted?label=help%20wanted)](https://github.com/ant-design/ant-design-mobile/issues?q=is%3Aissue+is%3Aopen+label%3A%22help+wanted%22) ![GitHub Workflow Status (branch)](https://img.shields.io/github/actions/workflow/status/ant-design/ant-design-mobile/check.yml?branch=master) [![codecov](https://img.shields.io/codecov/c/gh/ant-design/ant-design-mobile?token=2kJyJBg1nK)](https://codecov.io/gh/ant-design/ant-design-mobile) [![GitHub](https://img.shields.io/github/license/ant-design/ant-design-mobile)](https://github.com/ant-design/ant-design-mobile)
 
-## Features
+  <h4>
+    <a href="https://mobile.ant.design">English Doc</a>
+  <span> · </span>
+    <a href="https://mobile.ant.design/zh">中文文档</a>
+  <span> · </span>
+    <a href="https://discord.gg/jmNvw4WFYn">Discord</a>
+  <span> · </span>
+    <a href="https://mdn.alipayobjects.com/huamei_pdkywj/afts/img/A*nC08QYnlP68AAAAAAAAAAAAAesHxAQ/original">钉钉</a>
+  </h4>
+</div>
 
-- Follow Ant Design Mobile UI specification.
-- Configurable UI style for different products.
-- Develop in TypeScript.
+```bash
+$ npm install antd-mobile
+# or
+$ yarn add antd-mobile
+# or
+$ pnpm add antd-mobile
+# or
+$ bun add antd-mobile
+```
 
-## Demo
+- **Fast**: It is carefully optimized for harsh scenes, without configuration, you can have the best package size and ultimate performance.
+- **Customizable**: Based on CSS variables, you can reliably and efficiently adjust the appearance of components or create your own themes.
+- **Atomic**: The function of each component, neither more nor less, is exactly what you need.
+- **Fluent**: With smooth gestures and delicate animation, it helps the product create the ultimate experience.
 
-### mobile web demo
+You can also play with antd-mobile just in browser with [Codesandbox](https://codesandbox.io/s/antd-mobile-snrxr?file=/package.json). No need to prepare development environment.
 
-<img width="250" src="https://zos.alipayobjects.com/rmsportal/dLMGiKuyFLBfYfm.png" />
+If you found bugs or would like to request some new features, please consider opening an [issue](https://github.com/ant-design/ant-design-mobile/issues/new).
 
-http://mobile.ant.design/kitchen-sink/
+If you have some questions about how to use ant-mobile, you can start a [discussion thread](https://github.com/ant-design/ant-design-mobile/discussions).
 
-## Install & Usage
+---
 
-[introduce](docs/react/introduce.en-US.md#安装)
 
-## Browser Support
+## 🤝 Contributing 
 
-- `iOS`
-- `Android 4.0+`
+Thanks to all the contributors of antd-mobile:
 
-## Links
+<a href="https://openomy.app/github/ant-design/ant-design-mobile" target="_blank" style="display: block; width: 100%;" align="center">
+  <img src="https://www.openomy.app/svg?repo=ant-design/ant-design-mobile&chart=bubble&latestMonth=3" target="_blank" alt="Contribution Leaderboard" style="display: block; width: 100%;" />
+</a>
 
-- [Home Page](http://mobile.ant.design)
-- [Developer Instruction](http://github.com/ant-design/ant-design-mobile/blob/master/development.en-US.md)
-- [React components](http://github.com/react-component/)
-- [Demos](https://github.com/ant-design/antd-mobile-samples)
-
-## Contributing
-
-We welcome all contributions, please read our [CONTRIBUTING.md](https://github.com/ant-design/ant-design-mobile/blob/master/.github/CONTRIBUTING.md) first. You can submit any ideas as [pull requests](https://github.com/ant-design/ant-design-mobile/pulls) or as a [GitHub issue](https://github.com/ant-design/ant-design-mobile/issues). If you'd like to improve code, check out the [Development Instruction](https://github.com/ant-design/ant-design-mobile/blob/master/development.en-US.md) and have a good time! :)
+<a href="https://github.com/ant-design/ant-design-mobile/graphs/contributors">
+  <img src="https://opencollective.com/ant-design-mobile/contributors.svg?width=960&button=false" alt="contributors" />
+</a>
